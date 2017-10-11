@@ -10,17 +10,17 @@ using SuggestionBox.Models;
 
 namespace SuggestionBox.Controllers
 {
-    public class SuggestionModelsController : Controller
+    public class SuggestionModels1Controller : Controller
     {
         private SuggestionBoxContext db = new SuggestionBoxContext();
 
-        // GET: SuggestionModels
+        // GET: SuggestionModels1
         public ActionResult Index()
         {
             return View(db.SuggestionModels.ToList());
         }
 
-        // GET: SuggestionModels/Details/5
+        // GET: SuggestionModels1/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,13 +35,13 @@ namespace SuggestionBox.Controllers
             return View(suggestionModel);
         }
 
-        // GET: SuggestionModels/Create
+        // GET: SuggestionModels1/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: SuggestionModels/Create
+        // POST: SuggestionModels1/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -58,7 +58,7 @@ namespace SuggestionBox.Controllers
             return View(suggestionModel);
         }
 
-        // GET: SuggestionModels/Edit/5
+        // GET: SuggestionModels1/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -73,7 +73,7 @@ namespace SuggestionBox.Controllers
             return View(suggestionModel);
         }
 
-        // POST: SuggestionModels/Edit/5
+        // POST: SuggestionModels1/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -89,7 +89,7 @@ namespace SuggestionBox.Controllers
             return View(suggestionModel);
         }
 
-        // GET: SuggestionModels/Delete/5
+        // GET: SuggestionModels1/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -104,7 +104,7 @@ namespace SuggestionBox.Controllers
             return View(suggestionModel);
         }
 
-        // POST: SuggestionModels/Delete/5
+        // POST: SuggestionModels1/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
